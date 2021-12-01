@@ -15,18 +15,17 @@ def part1(array):
 def part2(array):
     count = 0
     prevSum = None
-    for i in range(len(array)): #wszystkie
-        if i >= 0 and i+2 < len(array):
-            nextSum = array[i] + array[i+1] + array[i+2]
+    for i in range(len(array)):
+        if i+2 < len(array):
+            nextSum = sum(array[x] for x in range(i, i+3))
             if prevSum and prevSum < nextSum:
                 count+=1
             prevSum = nextSum
-        print(prevSum, nextSum, count)
+    return count
         
 
-
 if __name__ == '__main__':
-    input1 = parseInput('input1.txt')
-    input2 = parseInput('input2.txt')
-    print(part2(input2))
+    input = parseInput('input1.txt')
+    print(part1(input))
+    print(part2(input))
 
