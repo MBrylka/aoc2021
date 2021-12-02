@@ -2,3 +2,4 @@
 
 ## days:
 - 1 - completed
+- 2 - completed
