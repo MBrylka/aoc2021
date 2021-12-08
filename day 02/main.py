@@ -8,7 +8,7 @@ def parseInput(filename):
 def processCommands(array):
     position = 0
     aim = 0
-    depth = 0
+    depth = 0   
     for command in array:
         value = int(command[1])
         
@@ -21,7 +21,6 @@ def processCommands(array):
             aim += value
 
     return (position * aim, position * depth)
-
 
 if __name__ == '__main__':
     input = parseInput('input1.txt')
